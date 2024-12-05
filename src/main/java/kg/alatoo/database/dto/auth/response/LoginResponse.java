@@ -1,4 +1,7 @@
 package kg.alatoo.database.dto.auth.response;
 
-public class LoginResponse {
+public record LoginResponse(
+        String token,
+        String refreshToken
+) {
 }

@@ -1,4 +1,11 @@
 package kg.alatoo.database.dto.auth.request;
 
-public class LoginRequest {
+import jakarta.validation.constraints.NotEmpty;
+
+public record LoginRequest(
+        @NotEmpty(message = "Username should be not empty")
+        String username,
+        @NotEmpty(message = "Password should be not empty")
+        String password
+) {
 }

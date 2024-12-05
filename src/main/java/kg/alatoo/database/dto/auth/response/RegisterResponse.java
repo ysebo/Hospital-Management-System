@@ -1,4 +1,6 @@
 package kg.alatoo.database.dto.auth.response;
 
-public class RegisterResponse {
+public record RegisterResponse(
+        String email
+) {
 }
