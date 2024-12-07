@@ -4,6 +4,7 @@ import kg.alatoo.database.dto.auth.request.LoginRequest;
 import kg.alatoo.database.dto.auth.request.RegisterRequest;
 import kg.alatoo.database.dto.auth.response.LoginResponse;
 import kg.alatoo.database.dto.auth.response.RegisterResponse;
+import kg.alatoo.database.dto.user.UserDTO;
 import kg.alatoo.database.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -18,7 +19,7 @@ public class AuthController {
     private AuthService authService;
     @PostMapping("/register")
     public String register(@ModelAttribute RegisterRequest request) {
-        RegisterResponse response = authService.register(request);
+        UserDTO response = authService.register(request);
         return "redirect:/pages/home";
     }
     @PostMapping("/login")

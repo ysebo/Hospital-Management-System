@@ -7,8 +7,8 @@ public record RegisterRequest(
         @Email(message = "Email should be valid")
         @NotEmpty(message = "Email should be not empty")
         String email,
-        @NotEmpty(message = "Username should be not empty")
-        String username,
+        @NotEmpty(message = "phoneNumber should be not empty")
+        String phoneNumber,
         @NotEmpty(message = "Password should be not empty")
         String password
 ) {

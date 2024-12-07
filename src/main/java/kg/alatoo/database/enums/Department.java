@@ -1,5 +1,10 @@
 package kg.alatoo.database.enums;
 
 public enum Department {
-    NEUROLOGY
+    CARDIOLOGY,
+    DERMATOLOGY,
+    NEUROLOGY,
+    ORTHOPEDICS,
+    PEDIATRICS,
+    GENERAL_PRACTICE
 }
