@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Appointments</title>
+    <link rel="stylesheet" type="text/css" href="/css/auth.css">
+</head>
+<body>
+
+<h2>Appointments</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Patient</th>
+        <th>Time</th>
+        <th>Status</th>
+        <th>Update</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="appointment : ${appointments}">
+        <td th:text="${appointment.patient.fullName}"></td>
+        <td th:text="${appointment.time}"></td>
+        <td th:text="${appointment.status}"></td>
+        <td><a th:href="@{/doctor/appointments/{id}/update(id=${appointment.id})}">Update</a></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
