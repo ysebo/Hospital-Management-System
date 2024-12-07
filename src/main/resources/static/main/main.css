@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+}
+
+.hospital-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hospital-info h2 {
+    color: #34495e;
+}
+
+.hospital-info p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #7f8c8d;
+}
+
+.quick-links {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.quick-links h3 {
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.btn {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    width: 200px;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+    border: 1px solid #3498db;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+.btn-success {
+    background-color: #2ecc71;
+    color: white;
+    border: 1px solid #2ecc71;
+}
+
+.btn-success:hover {
+    background-color: #27ae60;
+    border-color: #27ae60;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-info h3 {
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #7f8c8d;
+}
+
+address {
+    font-style: normal;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+    font-size: 1rem;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .hospital-info p {
+        font-size: 1rem;
+    }
+
+    .quick-links .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+        width: 150px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
