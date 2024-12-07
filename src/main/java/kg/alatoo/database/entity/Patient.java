@@ -1,5 +1,6 @@
 package kg.alatoo.database.entity;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -27,5 +28,8 @@ public class Patient {
 
     @OneToMany(mappedBy = "patient")
     private List<Appointment> appointments;
+
+    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL)
+    private List<MedicalRecord> medicalRecords;
 
 }

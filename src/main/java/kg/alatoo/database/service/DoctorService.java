@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface DoctorService {
 
-    List<PatientDTO> getAssignedPatients();
+    List<PatientDTO> getAssignedPatients(Long doctorId);
     MedicalHistoryDTO getPatientMedicalHistory(Long patientId);
-    List<AppointmentDTO> getAppointments();
+    List<AppointmentDTO> getAppointments(Long doctorId);
 }

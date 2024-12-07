@@ -16,22 +16,22 @@ public class DoctorController {
     private final DoctorService doctorService;
 
     @GetMapping("/patients")
-    public String viewAssignedPatients(Model model) {
-        var patients = doctorService.getAssignedPatients();
+    public String viewAssignedPatients(@PathVariable Long doctorId ,  Model model) {
+        var patients = doctorService.getAssignedPatients(doctorId);
         model.addAttribute("patients", patients);
-        return "doctor/patients";
+        return "patientList";
     }
     @GetMapping("/patients/{patientId}/history")
     public String viewPatientHistory(@PathVariable Long patientId, Model model) {
         var history = doctorService.getPatientMedicalHistory(patientId);
         model.addAttribute("history", history);
-        return "doctor/patientHistory";
+        return "patientHistory";
     }
     @GetMapping("/appointments")
-    public String viewAppointments(Model model) {
-        var appointments = doctorService.getAppointments();
+    public String viewAppointments(@PathVariable Long doctorId ,  Model model) {
+        var appointments = doctorService.getAppointments(doctorId);
         model.addAttribute("appointments", appointments);
-        return "doctor/appointments";
+        return "appointments";
     }
 
 }
