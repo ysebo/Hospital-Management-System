@@ -8,4 +8,7 @@ public record LoginRequest(
         @NotEmpty(message = "Password should be not empty")
         String password
 ) {
+        public LoginRequest() {
+                this("", "");
+        }
 }

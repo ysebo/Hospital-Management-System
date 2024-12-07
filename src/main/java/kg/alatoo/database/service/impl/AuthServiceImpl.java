@@ -29,14 +29,15 @@ public class AuthServiceImpl implements AuthService {
     private final JwtService jwtService;
     @Override
     public UserDTO register(RegisterRequest request) {
-        if(userRepository.findByEmail(request.email()).isPresent()) {
+        if(userRepository.findByEmail(request.getEmail()).isPresent()) {
             throw new CustomException("User with this email already exists!" , HttpStatus.BAD_REQUEST);
         }
-        if(userRepository.findByPhoneNumber(request.phoneNumber()).isPresent()) {
+        if(userRepository.findByPhoneNumber(request.getPhoneNumber()).isPresent()) {
             throw new CustomException("User with this phone number already exists!" , HttpStatus.BAD_REQUEST);
         }
         User user = mapper.toEntity(request);
-        user.setPassword(passwordEncoder.encode(request.password()));
+        user.setPassword(passwordEncoder.encode(request.getPassword()));
+
         try {
             userRepository.save(user);
         } catch (Exception e) {
